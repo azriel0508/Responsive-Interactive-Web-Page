@@ -1,1 +1,21 @@
+.main{
+    flex: auto;
+    flex-wrap: wrap;
+}
+.profile,
+.weekly-goals,
+.status{
+    flex: 1 1 320px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
 
+.profile img{
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    border-radius: 8px;
+    margin-top: 15px;
+}

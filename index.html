@@ -1,53 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <!--For Phone Size Adjustments:-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Assignment 2</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<main class="main">
-    <body class="body">
-        <!--Main Section-->
 
-        <!--Navigation Bar and Main Header-->
-        <header class="header">
-            <a href="index.html">Home</a>
-            <a href="tasks.html">Tasks</a>
-            <a href="profile.html">Profile</a>
+<body>
+    <header>
+        <h1>My Study Dashboard</h1>
+        <p id="welcomeMessage"></p>
+    </header>
 
-            <h1>My Study Dashboard</h1>
-        </header>
+    <nav>
+        <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Tasks</a></li>
+        <li><a href="#">Profile</a></li>
+        </ul>
+    </nav>
 
-        <!--Profile Card-->
-        <section class="profile">
-            <h2>Felix Azriel Elmido</h2>
-            <p>
-                I am currently studying Computer Science with Software Engineering (MH602) in Maynooth University. I love coding, basketball, volleyball, photography and coding.
-            </p>
-            <img src="profile.jpg" alt="Felix Elmido Profile">
-        </section>
-        
-        <!--Weekly Goals List-->
-        <section class="weekly-goals">
-            <h2>Weekly Goals</h2>
-            <ul>
-                <li>Attend all lectures</li>
-                <li>Improve Health</li>
-                <li>Continue with CS Projects</li>
-                <li>Finish all assignments</li>
-            </ul>
-        </section>
+<main class="card-container">
 
-        <!--Status Panel-->
-        <section class="status">
-            <h2>Study Status</h2>
-            <p>
-                Status: Active
-            </p>
-        </section>
-    </body>
+    <!-- Profile Card -->
+    <section class="card profile-card">
+        <h2>Felix Azriel Elmido</h2>
+        <p class="about">
+        I am currently studying Computer Science in Maynooth University. Currently learning about HTML, CSS and most importantly JavaScript
+        </p>
+        <img src="profile.jpg" alt="Profile photo">
+    </section>
+
+    <!-- Weekly Goals -->
+    <section class="card">
+        <h2>Weekly Goals</h2>
+        <ul>
+        <li>Review lecture notes</li>
+        <li>Complete lab exercises</li>
+        <li>Practice JavaScript</li>
+        <li>Work on assignments</li>
+        </ul>
+        <button id="showGoals">Show Goals</button>
+        <ul id="goalList"></ul>
+    </section>
+
+    <!-- Status Panel -->
+    <section class="card">
+    <h2>Study Status</h2>
+        <p class="status">Status:</p>
+
+        <p id="sessionText">Study sessions today: 0</p>
+
+        <button id="addSession">Add Session</button>
+        <button id="resetSession">Reset</button>
+    </section>
 </main>
+
+<!--Classic Footer-->
+<footer>
+    <p>© 2026 Felix Azriel Elmido | CS230</p>
+    <p>Last updated: March 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
 </html>

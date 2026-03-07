@@ -1,21 +1,114 @@
-.main{
-    flex: auto;
-    flex-wrap: wrap;
-}
-.profile,
-.weekly-goals,
-.status{
-    flex: 1 1 320px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+/*Main all around style*/
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f4f4;
 }
 
-.profile img{
-    width: 100%;
-    height: auto;
-    max-width: 250px;
-    border-radius: 8px;
-    margin-top: 15px;
+header{
+background:#333;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#444;
+}
+
+/*The links on top*/
+.nav-links{
+display:flex;
+justify-content:center;
+list-style:none;
+margin:0;
+padding:10px;
+gap:20px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+padding:8px 12px;
+transition:0.3s;
+}
+
+/*This gives the HOVER EFFECT*/
+.nav-links a:hover{
+background:#666;
+border-radius:5px;
+}
+
+/*CARD LAYOUT*/
+
+.card-container{
+display:flex;
+gap:20px;
+padding:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:20px;
+border:1px solid #ddd;
+border-radius:10px;
+width:300px;
+transition:0.3s;
+}
+
+/*PROFILE HOVER EFFECT*/
+.profile-card:hover{
+transform:scale(1.03);
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+/*STATUS LABEL ON ACTIVE OR NOT*/
+
+.status::after{
+content:" ACTIVE";
+color:green;
+font-weight:bold;
+}
+
+/*FOOTER*/
+
+footer{
+text-align:center;
+background:#333;
+color:white;
+padding:10px;
+margin-top:20px;
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media (max-width:700px){
+
+.nav-links{
+flex-direction:column;
+align-items:center;
+}
+
+.card-container{
+flex-direction:column;
+align-items:center;
+}
+
+body{
+font-size:14px;
+}
+
+/*hide profile image on small screens*/
+.profile-card img{
+display:none;
+}
+
 }

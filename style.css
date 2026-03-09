@@ -34,7 +34,7 @@ padding:8px 12px;
 transition:0.3s;
 }
 
-/*This gives the HOVER EFFECT*/
+/*This gives the HOVER EFFECT for the navigation links*/
 .nav-links a:hover{
 background:#666;
 border-radius:5px;

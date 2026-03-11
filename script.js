@@ -8,12 +8,14 @@ document.getElementById("welcomeMessage").textContent =
 
 /*STUDY COUNTER*/
 
+/*Count is the variable for every click and we show this in our html*/
 let count = 0;
 
 const sessionText = document.getElementById("sessionText");
 const addBtn = document.getElementById("addSession");
 const resetBtn = document.getElementById("resetSession");
 
+/*Add to count*/
 addBtn.addEventListener("click", function(){
 
 count++;
@@ -22,7 +24,7 @@ sessionText.textContent = "Study sessions today: " + count;
 
 });
 
-
+/*Reset the count*/
 resetBtn.addEventListener("click", function(){
 
 count = 0;
@@ -34,6 +36,7 @@ sessionText.textContent = "Study sessions today: " + count;
 
 /*WEEKLY GOALS ARRAY*/
 
+/*When we press the goals button this array prints out*/
 const goals = [
 "Read notes",
 "Finish lab",
@@ -59,6 +62,7 @@ showGoalsBtn.addEventListener("click", function(){
 
 goalList.innerHTML = "";
 
+/*This is the for loop to print the list of our array called goals to the actual HTML*/
 for(let i=0;i<goals.length;i++){
 
 const li = document.createElement("li");
